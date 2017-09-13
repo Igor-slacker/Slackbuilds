@@ -2,4 +2,5 @@ Vala Panel Application Menu is a Global Menu applet for use with
 Vala Panel, xfce4-panel and mate-panel (Budgie 10.x is also planned).
 
 By default vala-panel-appmenu will be builded for xfce-panel.
-Optionaly required appmenu-qt
+Requires bamf must be built without   --disable-introspection
+Optionaly requires appmenu-qt
