@@ -1,0 +1,17 @@
+diff --git a/unity-gtk-module/src/platform.c b/unity-gtk-module/src/platform.c
+index 326fa10..9d526f3 100644
+--- a/unity-gtk-module/src/platform.c
++++ b/unity-gtk-module/src/platform.c
+@@ -3,9 +3,11 @@
+ #include <gdk/gdkx.h>
+ #include <gtk/gtk.h>
+ 
+-#if GTK_CHECK_VERSION(3, 0, 0)
++#if GTK_MAJOR_VERSION == 3
++#ifdef GDK_WINDOWING_WAYLAND
+ #include <gdk/gdkwayland.h>
+ #endif
++#endif
+ 
+ #ifdef GDK_WINDOWING_X11
+ G_GNUC_INTERNAL gchar *gtk_widget_get_x11_property_string(GtkWidget *widget, const gchar *name)
