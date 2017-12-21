@@ -3,7 +3,7 @@
 if [ -n "$GTK_MODULES" ]; then
     GTK_MODULES="${GTK_MODULES}:unity-gtk-module"
 else
-    GTK_MODULES="unity-gtk-module"
+    GTK_MODULES="appmenu-gtk-module"
 fi
 
 if [ -z "$UBUNTU_MENUPROXY" ]; then
